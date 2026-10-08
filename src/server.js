@@ -20,10 +20,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // 3. Health Check
-app.get("/api/health", (req, res) => {
-  res.status(200).json({
-    status: "OK",
-    message: "Hệ thống Quản lý Đơn hàng hoạt động ổn định!",
+app.get("/", (req, res) => {
+  res.json({
+    message: "Chào mừng bạn đến với Máy chủ RESTful API E-Commerce - LHU TMĐT",
+    version: "1.0.0",
+    status: "ONLINE",
   });
 });
 
